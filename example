@@ -1,0 +1,62 @@
+print("Choose a data type to perform operations on:")
+print("1. Strings")
+print("2. Numbers")
+print("3. Booleans")
+print("4. Additional Data Types (List, Tuple, Dictionary)")
+
+choice = input("Enter the number of your choice (1-4): ")
+
+print(f'You chose {choice}!')
+if choice == '1':
+    sentence = "Learning Python is fun!"
+    parts = sentence.split()
+    print(parts[1])
+    print(f'The sentence converted to uppercase :{sentence.upper()}')
+    parts[3] = "awesome"
+    print(' '.join(parts))
+
+elif choice == '2':
+    one = int(input("Enter the first number: "))
+    two = int(input("Enter the second number: "))
+    print(f"Addition: {one + two}")
+    print(f'Subtraction: {one - two}')
+    print(f"Multiplication: {one * two}")
+    if two != 0:
+        print(f"Division: {one / two}")
+    else:
+        print("Error")
+    print(f'{one} raised to the power ot {two} is: {one ** two}')
+
+elif choice == "3":
+    print("yes")
+    is_python_fun = True
+    is_sunny = False
+    print(10 > 5)
+    print(6 == 5)
+
+
+# Perform and print the results of logical operations: AND, OR, NOT.
+
+# Perform and print the results of comparison operations (e.g., 10 > 5 and 5 == 5).
+elif choice == '4':
+    lst = ['1, 2, 3, "Python", True', ()]
+    lst[-1] = "mama"
+    print(lst)
+    print([4])
+    tup = ("apple", "banana", "cherry")
+    print(len(tup))
+    di = {"name": "Alice", "age": 25, "city": "New York"}
+    print(di['age'])
+# Try to modify one element in the tuple and handle the resulting TypeError.
+
+# ### Dictionary Operations ###
+# Create a dictionary with some key-value pairs (e.g., name, age, city).
+
+# Access and print the value for one of the keys (e.g., "age").
+
+# Add a new key-value pair to the dictionary and print the updated dictionary.
+
+# If the user enters an invalid choice:
+else:
+    print("ERROR")
+
