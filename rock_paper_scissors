@@ -1,0 +1,37 @@
+import random
+
+rock = "Rock"
+paper = "Paper"
+scissors = "Scissors"
+player = input("Choose [r]ock, [p]aper or [s]cissors: ")
+
+if player == "r":
+    player = rock
+elif player == "p":
+    player = paper
+elif player == "s":
+    player = scissors
+else:
+    raise SystemExit("Invalid Input. Try again...")
+
+rand = random.randint(1, 3)
+comp = ""
+if rand == 1:
+    com = rock
+elif rand == 2:
+    com = paper
+else:
+    com = scissors
+
+print(f"the computer chose {com}.")
+
+if (player == rock and com == scissors) or \
+        (player == scissors and com == paper) or \
+        (player == paper and com == rock):
+    print("You win")
+elif (player == rock and com == paper) or \
+        (player == scissors and com == rock) or \
+        (player == paper and com == scissors):
+    print("You loose")
+elif player == com:
+    print("Draw")
