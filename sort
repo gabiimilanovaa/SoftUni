@@ -1,3 +1,0 @@
-x = int(input())
-
-print(int(''.join(sorted(str(x))[::-1])))
