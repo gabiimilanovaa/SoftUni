@@ -1,7 +1,0 @@
-while True:
-    word = input()
-    if word == "End":
-        break
-    if word == "SoftUni":
-       continue
-    print("".join([char*2 for char in word]))
